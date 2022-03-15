@@ -10,7 +10,18 @@ num2 = 42
 num3 = 221
 # Expected output: '221 is odd'
 
+def isOddEven(num)
+    if num % 2 === 0
+        "The number #{num} is even."
+    else
+        "The number #{num} is odd"
+    end
 
+end
+
+p isOddEven(num1)
+p isOddEven(num2)
+p isOddEven(num3)
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
 
@@ -20,6 +31,14 @@ album2 = 'Sgt Pepper'
 # Expected output: 'Sgt Pppr'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
+
+def removeVowel(str)
+    str.delete "aeiouAEIOU"
+end
+
+p removeVowel(album1)
+p removeVowel(album2)
+p removeVowel(album3)
 
 
 
@@ -31,3 +50,15 @@ is_palindrome2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 is_palindrome3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome(str)
+    if str.downcase == str.downcase.reverse
+        "#{str} is a palindrome"
+    else
+        "#{str} is not a palindrome"
+    end
+end
+
+p palindrome(is_palindrome1)
+p palindrome(is_palindrome2)
+p palindrome(is_palindrome3)
